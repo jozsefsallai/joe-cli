@@ -13,6 +13,10 @@ go build -o -i joe github.com/jozsefsallai/joe-cli
 mv ./joe /somewhere/in/your/PATH
 ```
 
+## Command List
+
+  * joe upload [file]
+
 ## License
 
 MIT.
