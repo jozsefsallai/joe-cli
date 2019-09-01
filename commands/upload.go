@@ -4,14 +4,15 @@ import (
 	"bytes"
 	"fmt"
 	"log"
-	"net/http"
 	"os"
+	"path/filepath"
 	"strings"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
+	"github.com/h2non/filetype"
 	"github.com/jozsefsallai/joe-cli/config"
 	"github.com/urfave/cli"
 )
@@ -30,13 +31,15 @@ func uploadFile(s *session.Session, c config.AWSConfig, f string) error {
 	buf := make([]byte, size)
 	file.Read(buf)
 
+	kind, _ := filetype.Match(buf)
+
 	_, err = s3.New(s).PutObject(&s3.PutObjectInput{
 		Bucket:        aws.String(c.S3.Bucket),
-		Key:           aws.String(f),
+		Key:           aws.String(filepath.Base(f)),
 		ACL:           aws.String("public-read"),
 		Body:          bytes.NewReader(buf),
 		ContentLength: aws.Int64(size),
-		ContentType:   aws.String(http.DetectContentType(buf)),
+		ContentType:   aws.String(kind.MIME.Value),
 	})
 
 	return err
