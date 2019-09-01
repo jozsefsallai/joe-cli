@@ -1,0 +1,10 @@
+{
+  "aws": {
+    "key": "your aws key",
+    "secret": "your aws secret",
+    "s3": {
+      "bucket": "your S3 bucket",
+      "region": "your region"
+    }
+  }
+}
