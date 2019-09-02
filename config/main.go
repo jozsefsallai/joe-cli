@@ -23,9 +23,22 @@ type AWSConfig struct {
 	S3     S3Config `json:"s3"`
 }
 
+// WeatherDefaults is a struct containing the default values for the weather command
+type WeatherDefaults struct {
+	Latitude  float64 `json:"lat"`
+	Longitude float64 `json:"lon"`
+}
+
+// WeatherConfig is a struct containing the configuration for the weather command
+type WeatherConfig struct {
+	Key      string          `json:"key"`
+	Defaults WeatherDefaults `json:"defaults"`
+}
+
 // Config is a configuration struct
 type Config struct {
-	AWS AWSConfig `json:"aws"`
+	AWS     AWSConfig     `json:"aws"`
+	Weather WeatherConfig `json:"weather"`
 }
 
 // GetConfig returns a configuration object

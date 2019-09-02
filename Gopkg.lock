@@ -48,18 +48,6 @@
   version = "v1.23.13"
 
 [[projects]]
-  digest = "1:04904b7a6f24221e7999b554094e347885b4837beeba9933efadc93f4f5421ff"
-  name = "github.com/gabriel-vasile/mimetype"
-  packages = [
-    ".",
-    "internal/json",
-    "internal/matchers",
-  ]
-  pruneopts = "UT"
-  revision = "b9686d36d26efccccd34eff91a19f42a61bcdc95"
-  version = "v0.3.17"
-
-[[projects]]
   digest = "1:34562dc588cc0987a3b4ddf7ba3d09ee2213e6a3a752c8065601e298cbf0de7b"
   name = "github.com/h2non/filetype"
   packages = [
@@ -88,6 +76,14 @@
   version = "v1.1.0"
 
 [[projects]]
+  branch = "master"
+  digest = "1:a4a3985e55545fe6740b9041ccb8abeda767dfe40c10de9f481dcd3cb422c1dc"
+  name = "github.com/mlbright/darksky"
+  packages = ["v2"]
+  pruneopts = "UT"
+  revision = "0030fe613042a79e6b54d75bf27ef1c8d279a762"
+
+[[projects]]
   digest = "1:ca4df663ad76879ad38dbd736493679cbb1aa596c6d479fd9fc5e959e5ceb4fb"
   name = "github.com/urfave/cli"
   packages = ["."]
@@ -103,9 +99,9 @@
     "github.com/aws/aws-sdk-go/aws/credentials",
     "github.com/aws/aws-sdk-go/aws/session",
     "github.com/aws/aws-sdk-go/service/s3",
-    "github.com/gabriel-vasile/mimetype",
     "github.com/h2non/filetype",
     "github.com/mitchellh/go-homedir",
+    "github.com/mlbright/darksky/v2",
     "github.com/urfave/cli",
   ]
   solver-name = "gps-cdcl"

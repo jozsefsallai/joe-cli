@@ -15,7 +15,9 @@ mv ./joe /somewhere/in/your/PATH
 
 ## Command List
 
-  * joe upload [file]
+  * joe upload [file] - requires an AWS IAM key+secret pair in ~/.joerc.json
+  * joe weather now [lat?] [long?] - requires a [DarkSky](https://darksky.net/) API key in ~/.joerc.json
+  * joe weather tomorrow [lat?] [long?] - requires a [DarkSky](https://darksky.net/) API key in ~/.joerc.json
 
 ## License
 

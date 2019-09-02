@@ -6,5 +6,12 @@
       "bucket": "your S3 bucket",
       "region": "your region"
     }
+  },
+  "weather": {
+    "key": "darksky api key",
+    "defaults": {
+      "lat": 10.10,
+      "lon": 12.34
+    }
   }
 }
