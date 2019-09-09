@@ -20,6 +20,7 @@ func meta() {
 func setup() {
 	app.Commands = []cli.Command{
 		commands.UploadCommand,
+		commands.IPCommand,
 		commands.WeatherCommand,
 	}
 }
